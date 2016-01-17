@@ -1,14 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LiveEco</title>
+  <meta name="google-site-verification"
+    content="bFzBPQPqfj4_0pP41i6Qz379eXKiEGUoS8PcxCrDy1A" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- For third-generation iPad with high-resolution Retina display: -->
+      <!-- Size should be 144 x 144 pixels -->
+      <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+
+      <!-- For iPhone with high-resolution Retina display: -->
+      <!-- Size should be 114 x 114 pixels -->
+      <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+
+      <!-- For first- and second-generation iPad: -->
+      <!-- Size should be 72 x 72 pixels -->
+      <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+
+      <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+      <!-- Size should be 57 x 57 pixels -->
+      <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+
+      <!-- For all other devices -->
+      <!-- Size should be 32 x 32 pixels -->
+      <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>EcoElectronix is a passionate innovator of long-lasting, premium quality electronics that are eco-friendly and effective.</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span> -->
+          <!-- <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> -->
+        </button>
+        <%= link_to image_tag("web_logo_high.png", :class => "image-size image img-responsive"), root_path %>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav grey navbar-nav navbar-right hidden-xs">
+          <li><%= link_to 'Our Mission', about_path %></li>
+        </ul>
+        <ul class="nav green navbar-nav navbar-right hidden-xs">
+          <li><%= link_to 'EX-25', ex25_path %></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
 
 <%= yield %>
 
+ <br class="clr" />
+      <div class="footer">
+        <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+          <h2 class="h23"><b>About</b></h2>
+          <h2 class="h24">
+          <%= link_to 'Home', root_path %>
+          <br />
+          <%= link_to 'Our Mission', about_path %>
+          <br />
+          <%= link_to 'Privacy Policy', privacy_path %>
+          <br /></h2>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <h2 class="h23"><b>Contact</b></h2>
+          <h2 class="h24">Support@EcoElectronix.com
+            <br />
+            Santa Barbara, CA
+            <br />
+            United States</h2>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <h2 class="h23"><b>Products</b></h2>
+          <h2 class="h24">
+            <%= link_to 'EX-25', ex25_path %>
+        </div>
+        <div class="col-xs-12 col-sm-1">
+          <h2 class="h23"><b>Social</b></h2>
+          <%= link_to "https://www.facebook.com/ecofriendlyelectronix/" do %>
+          <%= image_tag 'face.png', :class => "social-button" %>
+          <% end %>
+          <%= link_to "https://twitter.com/Eco_Electronix" do %>
+          <%= image_tag 'twit.png', :class => "social-button" %>
+          <% end %>
+        </div>
+        <div class="col-xs-10 col-sm-offset-1">
+          <h2 class="h25">Copyright © 2016 LiveEco All rights reserved.</h2>
+        </div>
+      </div>
 </body>
 </html>
